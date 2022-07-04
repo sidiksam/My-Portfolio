@@ -32,9 +32,10 @@ nav img {
   align-items: center;
   margin: 8px 23px;
   height: 100vh;
-  display: grid;
-  grid-template-rows: auto auto auto auto;
+  /* display: grid;
+  grid-template-rows: auto auto auto auto; */
   padding: 8px 0 0 10px;
+  float: right;
 }
 
 .social-media-icons {
