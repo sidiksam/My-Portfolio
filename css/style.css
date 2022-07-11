@@ -427,7 +427,7 @@
     gap: 30px;
   }
 
-  .navMenu :hover {
+  .navMenu:hover {
     background: #edecff;
     color: #191765;
     transform: scale(1.1);
@@ -442,13 +442,6 @@
     color: #fff;
     text-decoration: none;
   }
-  .navMenu :hover{
-    background: #edecff;
-    color: #191765;
-    transform: scale(1.1);
-    
-  }
-  
 
   .menu-section {
     flex-direction: column;
@@ -583,10 +576,6 @@
     list-style: none;
     gap: 5vh;
     padding-top: 18px;
-  }
-  .social-media-icons li :hover{
-    transform:scale(1.2);
-    border: 1px;
   }
 
   .social-media-icons li :hover {
