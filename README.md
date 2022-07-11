@@ -12,9 +12,9 @@
 - Frameworks
 - Technologies used
 
-## Live Demo (if available)
+## Live Demo )
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://sidiksam.github.io/)
 
 
 ## Getting Started
