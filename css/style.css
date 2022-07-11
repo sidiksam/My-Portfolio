@@ -427,7 +427,12 @@
     gap: 30px;
   }
 
-  .navMenu:hover {
+  .navMenu a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .navMenu a:hover {
     background: #edecff;
     color: #191765;
     transform: scale(1.1);
@@ -436,11 +441,6 @@
   .navMenu img:hover {
     background: #191765;
     transform: scale(1.1);
-  }
-
-  .navMenu a {
-    color: #fff;
-    text-decoration: none;
   }
 
   .menu-section {
