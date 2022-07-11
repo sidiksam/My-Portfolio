@@ -427,7 +427,12 @@
     gap: 30px;
   }
 
-  .navMenu :hover {
+  .navMenu a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .navMenu a:hover {
     background: #edecff;
     color: #191765;
     transform: scale(1.1);
@@ -437,18 +442,6 @@
     background: #191765;
     transform: scale(1.1);
   }
-
-  .navMenu a {
-    color: #fff;
-    text-decoration: none;
-  }
-  .navMenu :hover{
-    background: #edecff;
-    color: #191765;
-    transform: scale(1.1);
-    
-  }
-  
 
   .menu-section {
     flex-direction: column;
@@ -583,10 +576,6 @@
     list-style: none;
     gap: 5vh;
     padding-top: 18px;
-  }
-  .social-media-icons li :hover{
-    transform:scale(1.2);
-    border: 1px;
   }
 
   .social-media-icons li :hover {
