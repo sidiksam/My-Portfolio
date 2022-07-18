@@ -67,3 +67,14 @@ Give a ⭐️ if you like this project!
 ## 📝 License
 
 This project is [MIT](./MIT.md) licensed.
+
+## Accessibility check
+    Page title no issue found 
+    image text alt:I added the alt text in line 20,25 and line 92
+    No issue found on text heading
+    No issue found on Color contrast
+    No issue found on Text resize
+    No issue found on Intraction
+    No issue found on Moving content
+    No issue found on Multimedia
+    No issue found for The basic structure of the page.
