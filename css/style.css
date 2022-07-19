@@ -8,22 +8,28 @@
   background: #191765;
   box-sizing: border-box;
   transition-duration: 0ms;
+  
 }
 
 /* Mobile version */
 @media (max-width: 767px) {
+
   li {
     list-style: none;
   }
 
   a {
     text-decoration: none;
+    
   }
+
 
   .navLink {
     font-size: 1rem;
     font-weight: 400;
     color: #fff;
+    
+    
   }
 
   .navLink:hover {
@@ -41,6 +47,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem 1.5rem;
+    
   }
 
   .hamburgerLine {
@@ -51,27 +58,52 @@
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     background-color: #fff;
+    
   }
 
   .navMenu {
     position: fixed;
     left: -100%;
-    top: 4rem;
+    top: 0.2rem;
+    padding-top: 60px;
     flex-direction: column;
-    background-color: #191765;
+    background-image: url('/image/mobilemenu.png');
+    background-size: cover;
+    background-repeat: no-repeat;
     width: 100%;
-    border-radius: 10px;
-    text-align: center;
+    height:100vh;
+    text-align: start;
+    padding-left: 30px;
     transition: 0.3s;
     box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    
   }
+
+  .navSpan{
+    color: #ACB7C3;
+    font-size: 20px;
+    font-weight: 400px;
+    padding-left: 13rem;
+    align-items: flex-end;
+    
+  }
+
+  .navAbout{
+    color: #ACB7C3;
+    font-size: 20px;
+    font-weight: 400px;
+    padding-left: 14rem;
+    
+  }
+
 
   .navMenu.active {
     left: 0;
   }
 
   .navItem {
-    margin: 1.5rem 0;
+    margin: 2.5rem 0;
+  
   }
 
   .navImg {
@@ -357,6 +389,7 @@
 
   form {
     display: flex;
+    
   }
 
   .textInput {
@@ -365,6 +398,7 @@
     height: 6vh;
     margin-top: 20px;
     margin-bottom: 2px;
+
   }
 
   .emailInput::placeholder {
@@ -483,15 +517,7 @@
     display: none;
   }
 
-  .hamburgerLine {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    background-color: #fff;
-  }
+  
 
   .navMenu {
     display: flex;
@@ -507,6 +533,15 @@
     font-size: 1.3rem;
     font-weight: 400;
     color: #fff;
+  }
+
+  .navSpan{
+    display: none;
+
+  }
+
+  .navAbout{
+    display: none;
   }
 
   .navLink:hover {
