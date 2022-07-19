@@ -9,23 +9,42 @@
   </head>
   <body>
     <header>
-      <nav>
-        <div class="navBar container">
-          <a href="#">John Doe</a>
-
-          <div class="navMenu">
-            <a href="#">Portfolio</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
-            <img src="/image/message.png" alt="message box" />
-          </div>
-        </div>
-        <div class="mobile-nav">
-          <p class="johnDoe">John Doe</p>
-          <img class="image-nav" src="image/Menu.png" alt="Navigation" />
+      <nav class="navBar" id="navbar">
+        <a href="#header" class="navLogo">Samura</a>
+        <ul class="navMenu leftArrow">
+          <li class="navItem">
+            <a href="#portfolio" class="navLink"
+              >Portfolio <span class="navSpan">></span></a
+            >
+          </li>
+          <li class="navItem">
+            <a href="#about" class="navLink"
+              >About <span class="navAbout">></span></a
+            >
+          </li>
+          <li class="navItem">
+            <a href="#contact" class="navLink"
+              >Contact <span class="navSpan">></span></a
+            >
+          </li>
+          <li class="navItem">
+            <a href="#messageBox">
+              <img
+                class="navLink navImg"
+                src="/image/message.png"
+                alt="message box"
+              />
+            </a>
+          </li>
+        </ul>
+        <div class="hamburgerMenu">
+          <span class="hamburgerLine"></span>
+          <span class="hamburgerLine"></span>
+          <span class="hamburgerLine"></span>
         </div>
       </nav>
     </header>
+
     <section class="menu-section container">
       <div>
         <p class="circle1 container"></p>
@@ -134,7 +153,7 @@
         </div>
       </div>
     </section>
-    <section class="container recent">
+    <section class="container recent" id="portfolio">
       <!-- Work Section -->
       <h3 class="myRecentWork container">MY RECENT WORK</h3>
       <div class="borderSection container">
@@ -271,7 +290,7 @@
         </div>
       </div>
     </section>
-    <section class="container recent">
+    <section class="container recent" id="contact">
       <div>
         <h3 class="contact container">CONTACT US</h3>
         <div class="discripContact">
@@ -363,5 +382,6 @@
         <p>samuraabu03@gmail.com</p>
       </div>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
