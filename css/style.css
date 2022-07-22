@@ -1274,7 +1274,7 @@ body {
     top: 50%;
     left: 50%;
     width: 85%;
-    height: 95%;
+    height: 97%;
     transform: translate(-50%, -50%) scale(0);
     transition: 200ms ease-in-out;
     border-radius: 2px;
@@ -1282,10 +1282,12 @@ body {
     background: rgba(255, 255, 255, 0.16);
     border: 1px solid #fff;
     box-shadow: 0.1px 48px 48px rgba(37, 47, 137, 0.08);
+    
   }
 
   .mobile-modal.active {
     transform: translate(-50%, -50%) scale(1);
+    
   }
 
   .mobile-modal-header {
@@ -1330,7 +1332,7 @@ body {
     display: block;
     position: absolute;
     width: 100%;
-    height: 45vh;
+    height: 50%;
     margin: auto;
     top: 82px;
     padding: 0.1px 20px;
@@ -1381,6 +1383,7 @@ body {
     pointer-events: none;
     background: #04023023;
     height: 100%;
+    
   }
 
   #popup.active {
