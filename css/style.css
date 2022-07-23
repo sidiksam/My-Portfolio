@@ -1088,4 +1088,8 @@ body {
     color: #fff;
     margin-bottom: 16px;
   }
+
+  #errorDisplay {
+    color: red;
+  }
 }
