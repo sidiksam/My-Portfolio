@@ -270,3 +270,6 @@ popup.addEventListener('click', () => {
     closePopup(modal);
   });
 });
+
+
+// Local storage
