@@ -284,7 +284,7 @@ body {
 
   .supportingText {
     width: 42vh;
-    height: 150px;
+    height: 140px;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -297,12 +297,13 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 25px;
-    gap: 18px;
+    gap: 13px;
     width: 86vw;
     height: 40px;
     color: #fff;
     font-size: 14px;
+    margin-top: 8rem;
+    margin-bottom: 2rem;
   }
 
   .rectangle {
@@ -483,12 +484,178 @@ body {
     color: #fff;
     margin-bottom: 16px;
   }
+
+  /* Mobile modal */
+  .mobile-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    height: 98%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border-radius: 2px;
+    z-index: 10;
+    background: #191765;
+    border: 1px solid #fff;
+    box-shadow: 0.1px 48px 48px rgba(37, 47, 137, 0.08);
+  }
+
+  .mobile-modal.active {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  .mobile-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 278px;
+    height: 58px;
+  }
+
+  .mobile-modal-title {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    width: 226px;
+    height: 58px;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    color: #fff;
+  }
+
+  .closeImage {
+    position: absolute;
+    top: 12px;
+    left: 90%;
+    height: 20px;
+    width: 20px;
+    background: none;
+    border: none;
+    opacity: 1;
+  }
+
+  .mobileModalBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mobileModalImage {
+    position: absolute;
+    width: 279px;
+    height: 181px;
+    left: calc(50% - 279px / 2);
+    top: 50px;
+  }
+
+  .mobileModalText {
+    position: relative;
+    top: 250px;
+    left: 38px;
+    width: 70vw;
+    line-height: 20px;
+    height: 28px;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    text-align: center;
+    color: #fff;
+  }
+
+  .mobileModalLang {
+    position: absolute;
+    top: 485px;
+    left: 67px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 245px;
+    height: 41px;
+    font-family: "Roboto", sans-serif;
+    color: #fff;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+  }
+
+  #popup {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 1%;
+    left: 1%;
+    right: 1px;
+    z-index: 1;
+    pointer-events: none;
+    background: #ffffff29;
+  }
+
+  #popup.active {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .liveButton {
+    position: absolute;
+    top: 540px;
+    left: 110px;
+    display: flex;
+    padding: 12px;
+    align-items: flex-start;
+    gap: 12px;
+    width: 108px;
+    height: 48px;
+    background: #7d73fc;
+    box-shadow: 1px 8px 16px #7d73fc7a;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    font-family: "Roboto", sans-serif;
+    color: white;
+    border-style: none;
+  }
+
+  .srcButton {
+    position: absolute;
+    top: 610px;
+    left: 110px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    width: 124px;
+    height: 48px;
+    padding-top: 15px;
+    padding-left: 12px;
+    margin-left: -8px;
+    color: white;
+    background: #7d73fc;
+    box-shadow: 1px 8px 16px #7d73fc7a;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    font-family: "Roboto", sans-serif;
+    border-style: none;
+  }
+
+  .desktopModalImage,
+  .desktopModalText,
+  .liner-4,
+  .github-text {
+    display: none;
+  }
 }
 
 /* Desktop version */
 
 @media (min-width: 768px) {
   /* Desktop */
+
   li {
     list-style: none;
   }
@@ -815,14 +982,6 @@ body {
     margin-bottom: 50px;
   }
 
-  .multipleAndImageHolder1 {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: flex-start;
-    gap: 24px;
-    margin-bottom: 50px;
-  }
-
   .multiplePostAndText {
     display: flex;
     flex-direction: column;
@@ -841,7 +1000,7 @@ body {
   }
 
   .multiplePost {
-    height: 16.8vh;
+    height: 12vh;
     font-style: normal;
     font-weight: 700;
     font-family: Roboto, sans-serif;
@@ -868,10 +1027,11 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 25px;
     gap: 18px;
-    height: 10.5vh;
+    height: 1vh;
+    margin-top: 5rem;
     color: #fff;
+    margin-bottom: 25px;
   }
 
   .rectangle {
@@ -1092,4 +1252,186 @@ body {
   #errorDisplay {
     color: red;
   }
+
+  /* Desktop modal */
+  .mobile-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 85%;
+    height: 97%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border-radius: 2px;
+    z-index: 10;
+    background: #191765;
+    border: 1px solid #fff;
+    box-shadow: 1px 48px 48px #252f8914;
+    overflow: auto;
+  }
+
+  .mobile-modal.active {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  .mobile-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 278px;
+    height: 58px;
+  }
+
+  .mobile-modal-title {
+    position: absolute;
+    top: 20px;
+    left: 25px;
+    width: 226px;
+    height: 58px;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    color: #fff;
+  }
+
+  .closeImage {
+    position: absolute;
+    top: 20px;
+    left: 97%;
+    height: 20px;
+    width: 20px;
+    background: none;
+    border: none;
+    opacity: 1;
+  }
+
+  .mobileModalBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .desktopModalImage {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 450px;
+    margin: auto;
+    top: 82px;
+    padding: 0.1px 20px;
+    z-index: -1;
+  }
+
+  .desktopModalText {
+    display: block;
+    position: absolute;
+    left: 45vh;
+    top: 75vh;
+    width: 684px;
+    height: 236px;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+  }
+
+  .mobileModalLang {
+    position: absolute;
+    left: 580px;
+    top: 98vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    width: 245px;
+    height: 41px;
+    font-family: "Roboto", sans-serif;
+    color: #fff;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    padding-left: 15px;
+  }
+
+  #popup {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 1%;
+    left: 1%;
+    right: 1px;
+    z-index: 1;
+    pointer-events: none;
+    background: #ffffff29;
+    background-image:
+      url("../image/Ellipse-1.svg"),
+      url("../image/Ellipse-2.svg");
+    background-position: left, bottom right;
+    background-repeat: no-repeat;
+    overflow: auto;
+  }
+
+  .scrLive {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-top: 108vh;
+  }
+
+  #popup.active {
+    opacity: 1;
+    pointer-events: all;
+    width: 100%;
+    height: 100%;
+  }
+
+  .liveButton {
+    display: flex;
+    padding: 12px;
+    align-items: flex-start;
+    gap: 12px;
+    width: 108px;
+    height: 48px;
+    background: #7d73fc;
+    box-shadow: 1px 8px 16px #7d73fc7a;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    font-family: "Roboto", sans-serif;
+    border-style: none;
+    color: white;
+  }
+
+  .srcButton {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    width: 108px;
+    padding-left: 8px;
+    height: 48px;
+    padding-top: 15px;
+    color: white;
+    background: #7d73fc;
+    box-shadow: 1px 8px 16px #7d73fc7a;
+    font-style: normal;
+    font-weight: 500;
+    margin-bottom: 200px;
+    font-size: 12px;
+    font-family: "Roboto", sans-serif;
+    border-style: none;
+  }
+
+  .mobileModalText,
+  .mobileModalImage {
+    display: none;
+  }
+}
+
+.worksList .multipleAndImageHolder:nth-child(even) {
+  flex-direction: row-reverse;
+
 }
