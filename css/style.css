@@ -1249,6 +1249,10 @@ body {
     margin-bottom: 16px;
   }
 
+  #errorDisplay {
+    color: red;
+  }
+
   /* Desktop modal */
   .mobile-modal {
     position: fixed;
