@@ -1433,5 +1433,4 @@ body {
 
 .worksList .multipleAndImageHolder:nth-child(even) {
   flex-direction: row-reverse;
-
 }
