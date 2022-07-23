@@ -209,8 +209,8 @@ modalData.innerHTML = `<h2 class="mobile-modal-title">${desktopModalContent.titl
   <ul class="mobileModalLang">${language}</ul>
   <img class="mobileModalImage" src="${mobileModal.imageMobile}" alt="Project Image on mobile device">
   <p class="mobileModalText">${mobileModal.descriptionMobile}</p>
-  <button class="liveButton" type="button">See Live <img class="live-icon" src="./image/Icon.png"></button>
-  <button class="srcButton" type="button">See Source <img class="src-icon" src="./image/Vector(1).png"></button>
+  <div class="scrLive"><button class="liveButton" type="button">See Live <img class="live-icon" src="./image/Icon.png"></button>
+  <button class="srcButton" type="button">See Source <img class="src-icon" src="./image/Vector(1).png"></button></div>
 `;
 
 function openModal(modal) {
