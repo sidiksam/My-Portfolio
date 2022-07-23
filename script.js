@@ -1,7 +1,6 @@
 const hamburgerMenu = document.querySelector('.hamburgerMenu');
 const navMenu = document.querySelector('.navMenu');
 const navLink = document.querySelectorAll('.navLink');
-
 function mobileMenu() {
   hamburgerMenu.classList.toggle('active');
   navMenu.classList.toggle('active');
@@ -16,6 +15,134 @@ function closeMenu() {
 navLink.forEach((n) => n.addEventListener('click', closeMenu));
 
 // modal section
+
+const mobileModalContent = [
+  {
+    title: 'Multi-Post Stories',
+    descriptionDesktop:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting  ever since the 1500s, when an unknown printer took a galley of type veris lapoa todoe.",
+    imageDesktop: './image/modal-desktop.png',
+    closeImage: './image/close-icon.png',
+    languagesDesk: [
+      '|',
+      'html',
+      '|',
+      'Ruby on rails',
+      '|',
+      'css',
+      '|',
+      'Github',
+      '|',
+    ],
+  },
+
+  {
+    title: 'Multi-Post Stories',
+    descriptionDesktop:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting  ever since the 1500s, when an unknown printer took a galley of type veris lapoa todoe.",
+    imageDesktop: './image/modal-desktop.png',
+    closeImage: './image/close-icon.png',
+    languagesDesk: [
+      '|',
+      'html',
+      '|',
+      'Ruby on rails',
+      '|',
+      'css',
+      '|',
+      'Github',
+      '|',
+    ],
+  },
+
+  {
+    title: 'Multi-Post Stories',
+    descriptionDesktop:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting  ever since the 1500s, when an unknown printer took a galley of type veris lapoa todoe.",
+    imageDesktop: './image/modal-desktop.png',
+    closeImage: './image/close-icon.png',
+    languagesDesk: [
+      '|',
+      'html',
+      '|',
+      'Ruby on rails',
+      '|',
+      'css',
+      '|',
+      'Github',
+      '|',
+    ],
+  },
+
+  {
+    title: 'Multi-Post Stories',
+    descriptionDesktop:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting  ever since the 1500s, when an unknown printer took a galley of type veris lapoa todoe.",
+    imageDesktop: './image/modal-desktop.png',
+    closeImage: './image/close-icon.png',
+    languagesDesk: [
+      '|',
+      'html',
+      '|',
+      'Ruby on rails',
+      '|',
+      'css',
+      '|',
+      'Github',
+      '|',
+    ],
+  },
+];
+
+const workList = document.querySelector('.worksList');
+
+function createCards() {
+  mobileModalContent.forEach((card) => {
+    workList.innerHTML += ` <div class="multipleAndImageHolder container">
+    <div>
+      <img
+        class="imgPlaceholder container"
+        src="image/ImgPlaceholder.png"
+        alt="My Recrnt Work "
+      />
+    </div>
+    <div class="container">
+      <div>
+        <p class="ellipse1"></p>
+        <p class="ellipse2"></p>
+        <p class="ellipse3"></p>
+        <p class="ellipse"></p>
+      </div>
+      <h3 class="multiplePost container">${card.title}</h3>
+      <div class="supportingText container">
+        <p>
+        ${card.descriptionDesktop}
+        </p>
+      </div>
+      <ul class="tags">
+      <li>${card.languagesDesk[0]}</li>
+        <li>${card.languagesDesk[1]}</li>
+      <li>${card.languagesDesk[2]}</li>
+      <li>${card.languagesDesk[3]}</li>
+        <li>${card.languagesDesk[4]}</li>
+        <li>${card.languagesDesk[5]}</li>
+      <li>${card.languagesDesk[6]}</li>
+        <li>${card.languagesDesk[7]}</li>
+        <li>${card.languagesDesk[8]}</li>
+      </ul>
+      <button  data-modal-target="#modalMobile"  type="button"  class="seeProject"> See Project</button>
+      
+      <div class="mobile-modal" id="modalMobile"></div>
+    </div>
+    <div id="popup">
+
+    </div>
+  </div>`;
+  });
+}
+
+createCards();
+
 const openMobileModal = document.querySelectorAll('[data-modal-target]');
 const popup = document.querySelector('#popup');
 const mobileModal = [{
@@ -111,9 +238,3 @@ popup.addEventListener('click', () => {
     closePopup(modal);
   });
 });
-
-function closing() {
-  closePopup.style.display = 'none';
-}
-
-closing();

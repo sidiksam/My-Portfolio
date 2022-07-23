@@ -284,7 +284,7 @@ body {
 
   .supportingText {
     width: 42vh;
-    height: 150px;
+    height: 140px;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -297,12 +297,13 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 25px;
-    gap: 18px;
+    gap: 13px;
     width: 86vw;
     height: 40px;
     color: #fff;
     font-size: 14px;
+    margin-top: 8rem;
+    margin-bottom: 2rem;
   }
 
   .rectangle {
@@ -551,7 +552,7 @@ body {
   }
 
   .mobileModalText {
-    position: absolute;
+    position: relative;
     top: 250px;
     left: 38px;
     width: 70vw;
@@ -568,7 +569,7 @@ body {
   .mobileModalLang {
     position: absolute;
     top: 485px;
-    left: 80px;
+    left: 67px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -981,14 +982,6 @@ body {
     margin-bottom: 50px;
   }
 
-  .multipleAndImageHolder1 {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: flex-start;
-    gap: 24px;
-    margin-bottom: 50px;
-  }
-
   .multiplePostAndText {
     display: flex;
     flex-direction: column;
@@ -1007,7 +1000,7 @@ body {
   }
 
   .multiplePost {
-    height: 16.8vh;
+    height: 12vh;
     font-style: normal;
     font-weight: 700;
     font-family: Roboto, sans-serif;
@@ -1034,10 +1027,11 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 25px;
     gap: 18px;
-    height: 10.5vh;
+    height: 1vh;
+    margin-top: 5rem;
     color: #fff;
+    margin-bottom: 25px;
   }
 
   .rectangle {
@@ -1422,4 +1416,8 @@ body {
   .mobileModalImage {
     display: none;
   }
+}
+
+.worksList .multipleAndImageHolder:nth-child(even) {
+  flex-direction: row-reverse;
 }
