@@ -1251,6 +1251,7 @@ body {
 
   #errorDisplay {
     color: red;
+    border: 1px solid red;
   }
 
   /* Desktop modal */
