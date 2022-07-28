@@ -510,13 +510,13 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 278px;
-    height: 58px;
+    height: 60px;
   }
 
   .mobile-modal-title {
     position: absolute;
-    top: 5px;
-    left: 10px;
+    top: 28px;
+    left: 22px;
     width: 226px;
     height: 58px;
     font-family: "Roboto", sans-serif;
@@ -548,7 +548,7 @@ body {
     width: 279px;
     height: 181px;
     left: calc(50% - 279px / 2);
-    top: 50px;
+    top: 66px;
   }
 
   .mobileText {
