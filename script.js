@@ -205,10 +205,10 @@ const language = mobileModal.languagesMobile.join('  ');
 modalData.innerHTML = `<h2 class="mobile-modal-title">${desktopModalContent.title}</h2>
   <span> <a onclick="closePopupModal()" href="" class="close-popup"><img class="closeImage" src="${desktopModalContent.closeImage}" alt="Close Image Mobile modal" /></a></span>
   <img class="desktopModalImage" src="${desktopModalContent.imageDesktop}" alt="Project Image on desktop device">
-  <p class="desktopModalText">${desktopModalContent.descriptionDesktop}</p>
-  <ul class="mobileModalLang">${language}</ul>
+  <div class="desktopText"><p class="desktopModalText">${desktopModalContent.descriptionDesktop}</p></div>
+  <div class="mobileLang"><ul class="mobileModalLang">${language}</ul></div>
   <img class="mobileModalImage" src="${mobileModal.imageMobile}" alt="Project Image on mobile device">
-  <p class="mobileModalText">${mobileModal.descriptionMobile}</p>
+  <div class="mobileText"><p class="mobileModalText">${mobileModal.descriptionMobile}</p></div>
   <div class="scrLive"><button class="liveButton" type="button">See Live <img class="live-icon" src="./image/Icon.png"></button>
   <button class="srcButton" type="button">See Source <img class="src-icon" src="./image/Vector(1).png"></button></div>
 `;
