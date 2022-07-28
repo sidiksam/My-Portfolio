@@ -14,23 +14,26 @@ function closeMenu() {
 
 navLink.forEach((n) => n.addEventListener('click', closeMenu));
 
-// modal section
+// Validation
 
-// vALIDATION
+const form = document.getElementById('formSection');
+const errorDisplay = document.getElementById('errorDisplay');
 
-const form = document.querySelector('.formSection');
-const email = document.getElementById('email');
-// const errorMessage = document.getElementById('errorDisplay');
-const checker = /^([a-z0-9.-]+)@([a-z0-9-]+)\.([a-z]{2,20})(.[a-z]{2,8})?$/;
+function formSubmit() {
+  const email = document.getElementById('email').value;
+  const checker = /^([a-z0-9.-]+)@([a-z0-9-]+).([a-z]{2,20})(.[a-z]{2,8})?$/;
+ 
 
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  if (!checker.test(email)) {
-    console.log('Invalid');
-  } else {
-    console.log('Valid');
-  }
-});
+  form.addEventListener('submit', (e) => {
+    if (email.value.match(checker)) {
+      e.preventDefault();
+      errorDisplay.style.visibility = 'visible';
+      errorDisplay.classList.add('error-message');
+      errorDisplay.textContent = '*Your email address should be all in lowercase';
+    } else {
+      errorDisplay.style.visibility = 'hidden';
+    }
+  });
 
 const mobileModalContent = [
   {
@@ -161,31 +164,37 @@ createCards();
 
 const openMobileModal = document.querySelectorAll('[data-modal-target]');
 const popup = document.querySelector('#popup');
-const mobileModal = [{
-  title: 'Multi-Post Stories',
-  descriptionMobile: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting  ever since the 1500s, when an unknown printer took a galley of type veris lapoa todoe.",
-  imageMobile: './image/modalMobile.png',
-  closeImage: './image/close-icon.png',
-  languagesMobile: ['|', 'html', '|', 'Ruby on rails', '|', 'css'],
-}];
+const mobileModal = [
+  {
+    title: 'Multi-Post Stories',
+    descriptionMobile:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting  ever since the 1500s, when an unknown printer took a galley of type veris lapoa todoe.",
+    imageMobile: './image/modalMobile.png',
+    closeImage: './image/close-icon.png',
+    languagesMobile: ['|', 'html', '|', 'Ruby on rails', '|', 'css'],
+  },
+];
 
-const desktopModalContent = [{
-  title: 'Multi-Post Stories',
-  descriptionDesktop: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting  ever since the 1500s, when an unknown printer took a galley of type veris lapoa todoe.",
-  imageDesktop: './image/modal-desktop.png',
-  closeImage: './image/close-icon.png',
-  languagesDesk: [
-    '|',
-    'html',
-    '|',
-    'Ruby on rails',
-    '|',
-    'css',
-    '|',
-    'Github',
-    '|',
-  ],
-}];
+const desktopModalContent = [
+  {
+    title: 'Multi-Post Stories',
+    descriptionDesktop:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting  ever since the 1500s, when an unknown printer took a galley of type veris lapoa todoe.",
+    imageDesktop: './image/modal-desktop.png',
+    closeImage: './image/close-icon.png',
+    languagesDesk: [
+      '|',
+      'html',
+      '|',
+      'Ruby on rails',
+      '|',
+      'css',
+      '|',
+      'Github',
+      '|',
+    ],
+  },
+];
 
 const modalData = document.getElementById('modalMobile');
 
@@ -207,14 +216,7 @@ desktopModalContent.languagesDesk = [
 // modal data
 mobileModal.descriptionMobile = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting  ever since the 1500s, when an unknown printer took a galley of type veris lapoa todoe.";
 mobileModal.imageMobile = './image/modalMobile.png';
-mobileModal.languagesMobile = [
-  '|',
-  'html',
-  '|',
-  'Ruby on rails',
-  '|',
-  'css',
-];
+mobileModal.languagesMobile = ['|', 'html', '|', 'Ruby on rails', '|', 'css'];
 
 const language = mobileModal.languagesMobile.join('  ');
 

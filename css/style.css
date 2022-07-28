@@ -643,6 +643,11 @@ body {
     border-style: none;
   }
 
+  #errorDisplay {
+    color: red;
+    display:none;
+  }
+
   .desktopModalImage,
   .desktopModalText,
   .liner-4,
@@ -722,6 +727,7 @@ body {
     padding-top: 2px;
     padding-bottom: 2px;
   }
+
 
   .circle1 {
     position: absolute;
@@ -1249,9 +1255,8 @@ body {
     margin-bottom: 16px;
   }
 
-  #errorDisplay {
+  .errorDisplay {
     color: red;
-    border: 1px solid red;
   }
 
   /* Desktop modal */
