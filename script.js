@@ -106,7 +106,7 @@ function createCards() {
         alt="My Recrnt Work "
       />
     </div>
-    <div class="container">
+    <iv class="container">
       <div>
         <p class="ellipse1"></p>
         <p class="ellipse2"></p>
@@ -131,12 +131,7 @@ function createCards() {
         <li>${card.languagesDesk[8]}</li>
       </ul>
       <button  data-modal-target="#modalMobile"  type="button"  class="seeProject"> See Project</button>
-      
-      <div class="mobile-modal" id="modalMobile"></div>
-    </div>
-    <div id="popup">
-
-    </div>
+   
   </div>`;
   });
 }
@@ -145,13 +140,15 @@ createCards();
 
 const openMobileModal = document.querySelectorAll('[data-modal-target]');
 const popup = document.querySelector('#popup');
-const mobileModal = [{
-  title: 'Multi-Post Stories',
-  descriptionMobile: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting  ever since the 1500s, when an unknown printer took a galley of type veris lapoa todoe.",
-  imageMobile: './image/modalMobile.png',
-  closeImage: './image/close-icon.png',
-  languagesMobile: ['|', 'html', '|', 'Ruby on rails', '|', 'css'],
-}];
+const mobileModal = [
+  {
+    title: 'Multi-Post Stories',
+    descriptionMobile: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting  ever since the 1500s, when an unknown printer took a galley of type veris lapoa todoe.",
+    imageMobile: './image/modalMobile.png',
+    closeImage: './image/close-icon.png',
+    languagesMobile: ['|', 'html', '|', 'Ruby on rails', '|', 'css'],
+  },
+];
 
 const desktopModalContent = [{
   title: 'Multi-Post Stories',
