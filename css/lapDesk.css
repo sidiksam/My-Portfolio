@@ -474,47 +474,8 @@
     color: #dcdce8;
   }
 
-  .textInput {
-    display: flex;
-    justify-content: center;
-    background: #fff;
-    height: 7vh;
-    margin-top: 20px;
-    margin-bottom: 2px;
-    width: 35vw;
-    padding-left: 1vh;
-  }
-
-  .textInput::placeholder {
-    position: absolute;
-    height: 18px;
-    left: 16px;
-    right: 16px;
-    top: calc(50% - 18px / 2);
-    font-family: Inter, sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    color: #81818c;
-  }
-
-  .emailInput::placeholder {
-    position: absolute;
-    height: 18px;
-    left: 16px;
-    right: 16px;
-    top: calc(50% - 18px / 2);
-    font-family: Inter, sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    color: #191765;
+  #errorDisplay {
+    color: #dc3545;
   }
 
   .textarea {
@@ -523,6 +484,8 @@
     width: 35vw;
     padding-left: 1vh;
     padding-top: 3vh;
+    border: solid 1px #ccc;
+    border-radius: 3px;
   }
 
   .textarea::placeholder {
@@ -554,7 +517,7 @@
     text-decoration: none;
     font-size: 16px;
     cursor: pointer;
-    margin-top: 40px;
+    margin-top: 20px;
     margin-bottom: 30px;
     padding: 15px 40px;
   }

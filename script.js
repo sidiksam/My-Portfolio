@@ -14,7 +14,19 @@ function closeMenu() {
 
 navLink.forEach((n) => n.addEventListener('click', closeMenu));
 
-// modal section
+function validateEmail() {
+  const email1 = document.getElementById('email').value;
+  if (email1 === email1.toLowerCase()) {
+    // alert('email is valid');
+    document.forms.email.focus();
+    return true;
+  }
+
+  document.querySelector('.error-msg-before').classList.add('error-msg-after');
+  return false;
+}
+
+validateEmail();
 
 const mobileModalContent = [
   {

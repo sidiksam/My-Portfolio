@@ -18,8 +18,7 @@
         <ul class="navMenu leftArrow">
           <li class="navItem">
             <a href="#portfolio" class="navLink"
-              >Portfolio <span class="navSpan">></span></a
-            >
+              >Portfolio <span class="navSpan">></span></a>
           </li>
           <li class="navItem">
             <a href="#about" class="navLink"
@@ -185,7 +184,7 @@
       </div>
       <!-- Form section -->
       <div class="formSection container" id="contact">
-        <form action="https://formspree.io/f/mgedjawk" method="post">
+        <form name="form" action="https://formspree.io/f/mgedjawk" method="post" class="contact-form" onsubmit="return validateEmail(email) ">
           <ul>
             <li>
               <input
@@ -208,6 +207,7 @@
                 name="userEmail"
               />
             </li>
+            <li><div class="error-msg-before"> Error : Please enter email-ID with all lower case.</div></li>
             <li>
               <textarea
                 class="textarea"

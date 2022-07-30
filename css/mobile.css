@@ -13,6 +13,19 @@ body {
   background: #191765;
 }
 
+.error-msg-before {
+  font-size: 15px;
+  background-color: white;
+  color: red;
+  display: none;
+}
+
+.error-msg-after {
+  display: inline-block;
+  color: red;
+  margin: 0 0 0 0;
+}
+
 /* Mobile version */
 
 @media (max-width: 480px) {
