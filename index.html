@@ -182,50 +182,31 @@
         </div>
       </div>
       <!-- Form section -->
-      <div class="formSection container">
-        <form action="https://formspree.io/f/mgedjawk" method="post">
-          <ul>
-            <li>
-              <input
-                class="textInput"
-                required
-                maxlength="30"
-                type="text"
-                placeholder="Text input"
-                id="name"
-                name="userName"
-              />
-            </li>
-            <li>
+   
+    
+        <div class="formSection">
+          <form action="https://formspree.io/f/mgedjawk" method="post" id="signup">
+           
+            <div class="field">
               
-              <input
-                class="emailInput textInput"
-                required
-                placeholder="jeremy@gmail.com"
-                type="email"
-                id="email"
-                name="userEmail"
-              />
-            </li>
-            <li>
-              <textarea
-                class="textarea"
-                required
-                rows="10"
-                cols="50"
-                maxlength="500"
-                placeholder="Enter text here"
-                id="message"
-                name="userMessage"
-              ></textarea>
-            </li>
-            <li class="liButton">
-              <button  class="formButton" type="submit">
-                Send
-              </button>
-            </li>
-          </ul>
-        </form>
+              <input  type="text" 
+              maxlength="30" id="name" name="name" placeholder="Enter your fullname" />
+              <small></small>
+            </div>
+            <div class="field">
+            
+              <input type="text" id="email" name="email" placeholder="jeremy@gmail.com" />
+              <small></small>
+            </div>
+            <div class="field">
+              <textarea class="textarea" name="textarea" id="textarea" cols="30" rows="10" placeholder="Enter text here"></textarea>
+              <small></small>
+            </div>
+            <div class="field">
+              <button type="submit" class="formButton">Send</button>
+            </div>
+          </form>
+        </div>
       </div>
     </section>
     <!-- Footer -->

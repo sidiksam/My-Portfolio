@@ -643,7 +643,7 @@ body {
     border-style: none;
   }
 
-  #errorDisplay {
+  .errorDisplay {
     color: red;
     display:none;
   }
@@ -1134,47 +1134,97 @@ body {
     color: #dcdce8;
   }
 
-  .textInput {
-    display: flex;
-    justify-content: center;
-    background: #fff;
+  /* Form section */
+ 
+  
+  form {
+    max-width: 600px;
+    margin: 10px auto;
+    padding: 0.5rem 1rem;
+  }
+  
+  
+  .field {
+    margin-bottom: 0.75rem;
+  }
+  
+  .field small {
+    color: #dc3545;
+  }
+
+  
+  /* input, textarea */
+  input,
+  select {
+    border: solid 1px #ccc;
+    border-radius: 3px;
+    display: inline-block;
+    padding: 0.5rem 0.75rem;
+    width: 100%;
+    font-family: inherit;
+    font-size: 1rem;
     height: 7vh;
     margin-top: 20px;
     margin-bottom: 2px;
     width: 35vw;
     padding-left: 1vh;
   }
-
-  .textInput::placeholder {
-    position: absolute;
-    height: 18px;
-    left: 16px;
-    right: 16px;
-    top: calc(50% - 18px / 2);
-    font-family: Inter, sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    color: #81818c;
+  
+  input::placeholder {
+    color: #c2c2c2;
+  }
+  
+  input:focus,
+  textarea:focus,
+  select:focus {
+    outline: none;
+    box-shadow: 0 0 0 2pt rgb(49, 132, 253, 0.5);
+  }
+  
+  input[disabled],
+  textarea[disabled] {
+    background-color: #f5f5f5;
+    box-shadow: none;
+    color: #7a7a7a;
+    cursor: not-allowed;
+  }
+  
+  /* input error */
+  input.error,
+  textarea.error,
+  select.error {
+    border-color:  #dc3545;
+  }
+  
+  input.error:focus,
+  textarea.error:focus,
+  select.error:focus {
+    box-shadow: 0 0 0 0.25rem rgb(220 53 69 / 25%);
+  }
+  
+  /* input success */
+  input.success,
+  textarea.success,
+  select.success {
+    border-color: #198754;
+  }
+  
+  input.success:focus,
+  textarea.success:focus {
+    box-shadow: 0 0 0 0.25rem rgb(25 135 84 / 25%);
   }
 
-  .emailInput::placeholder {
-    position: absolute;
-    height: 18px;
-    left: 16px;
-    right: 16px;
-    top: calc(50% - 18px / 2);
-    font-family: Inter, sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    color: #191765;
+  
+  input[type="checkbox"],
+  input[type="radio"] {
+    vertical-align: baseline;
+    width: auto;
+  }
+  
+ 
+  
+  .error {
+    color: #dc3545;
   }
 
   .textarea {
@@ -1183,6 +1233,8 @@ body {
     width: 35vw;
     padding-left: 1vh;
     padding-top: 3vh;
+    border: solid 1px #ccc;
+    border-radius: 3px;
   }
 
   .textarea::placeholder {
@@ -1214,7 +1266,7 @@ body {
     text-decoration: none;
     font-size: 16px;
     cursor: pointer;
-    margin-top: 40px;
+    margin-top: 20px;
     margin-bottom: 30px;
     padding: 15px 40px;
   }
@@ -1255,9 +1307,6 @@ body {
     margin-bottom: 16px;
   }
 
-  .errorDisplay {
-    color: red;
-  }
 
   /* Desktop modal */
   .mobile-modal {
