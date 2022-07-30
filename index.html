@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/mobile.css" />
+    <link rel="stylesheet" href="css/lapDesk.css" />
+    <link rel="stylesheet" href="css/lowTableets.css" />
+    <link rel="stylesheet" href="css/tabIpad.css" />
+    <link rel="stylesheet" href="css/largScreen.css" />
     <title>My-Portfolio</title>
   </head>
   <body>
@@ -156,21 +160,19 @@
         </div>
       </div>
     </section>
-    <section class="container recent" id="portfolio">
+    <section class="container recent" >
       <!-- Work Section -->
       <h3 class="myRecentWork container">MY RECENT WORK</h3>
       <div class="borderSection container">
         <p class="border borderFull"></p>
       </div>
       <!-- My Recent work -->
+      <div id="modalMobile" class="mobile-modal"></div>
+      <div id="popup"></div>
 
-      <div class="worksList container">
-        <div class="mobile-modal" id="modalMobile">
-          <div id="popup" class="active"></div>
-        </div>
-      </div>
+      <div class="worksList container"></div>
     </section>
-    <section class="container recent" id="contact">
+    <section class="container recent">
       <div>
         <h3 class="contact container">CONTACT US</h3>
         <div class="discripContact">
@@ -182,31 +184,48 @@
         </div>
       </div>
       <!-- Form section -->
-   
-    
-        <div class="formSection">
-          <form action="https://formspree.io/f/mgedjawk" method="post" id="signup">
-           
-            <div class="field">
-              
-              <input  type="text" 
-              maxlength="30" id="name" name="name" placeholder="Enter your fullname" />
-              <small></small>
-            </div>
-            <div class="field">
-            
-              <input type="text" id="email" name="email" placeholder="jeremy@gmail.com" />
-              <small></small>
-            </div>
-            <div class="field">
-              <textarea class="textarea" name="textarea" id="textarea" cols="30" rows="10" placeholder="Enter text here"></textarea>
-              <small></small>
-            </div>
-            <div class="field">
-              <button type="submit" class="formButton">Send</button>
-            </div>
-          </form>
-        </div>
+      <div class="formSection container" id="contact">
+        <form name="form" action="https://formspree.io/f/mgedjawk" method="post" class="contact-form" onsubmit="return validateEmail(email) ">
+          <ul>
+            <li>
+              <input
+                class="textInput"
+                required
+                maxlength="30"
+                type="text"
+                placeholder="Text input"
+                id="name"
+                name="userName"
+              />
+            </li>
+            <li>
+              <input
+                class="emailInput textInput"
+                required
+                placeholder="jeremy@gmail.com"
+                type="email"
+                id="email"
+                name="userEmail"
+              />
+            </li>
+            <li><div class="error-msg-before"> Error : Please enter email-ID with all lower case.</div></li>
+            <li>
+              <textarea
+                class="textarea"
+                required
+                rows="10"
+                cols="50"
+                maxlength="500"
+                placeholder="Enter text here"
+                id="message"
+                name="userMessage"
+              ></textarea>
+            </li>
+            <li class="liButton">
+              <button class="formButton" type="submit">Send</button>
+            </li>
+          </ul>
+        </form>
       </div>
     </section>
     <!-- Footer -->
@@ -215,7 +234,7 @@
         <ul class="social-media-icons">
           <li>
             <a href="https://github.com/sidiksam">
-              <img class="icon" src="image/github.png" alt="Github image" />
+              <img class="icon" src="image/github.png" alt="Github" />
             </a>
           </li>
           <li>
@@ -234,12 +253,12 @@
           </li>
           <li>
             <a href="https://twitter.com/SidikSamura">
-              <img class="icon" src="image/Twitter.png" alt="Twitter image" />
+              <img class="icon" src="image/Twitter.png" alt="Twitter" />
             </a>
           </li>
           <li>
             <a href="medium.com">
-              <img class="icon" src="image/Medium.png" alt="Medium image" />
+              <img class="icon" src="image/Medium.png" alt="Medium" />
             </a>
           </li>
         </ul>

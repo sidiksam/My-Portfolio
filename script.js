@@ -14,69 +14,38 @@ function closeMenu() {
 
 navLink.forEach((n) => n.addEventListener('click', closeMenu));
 
-
-// form validation
-
-// show a message with a type of the input
-function showMessage(input, message, type) {
-  // get the small element and set the message
-  const msg = input.parentNode.querySelector('small');
-  msg.innerText = message;
-  // update the class for the input
-  input.className = type ? 'success' : 'error';
-  return type;
-}
-
-function showError(input, message) {
-  return showMessage(input, message, false);
-}
-
-function showSuccess(input) {
-  return showMessage(input, '', true);
-}
-
-function hasValue(input, message) {
-  if (input.value.trim() === '') {
-    return showError(input, message);
-  }
-  return showSuccess(input);
-}
-
-function validateEmail(input, requiredMsg, invalidMsg) {
-  // check if the value is not empty
-  if (!hasValue(input, requiredMsg)) {
-    return false;
-  }
-  // validate email format
-  const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-z\-0-9]+\.)+[a-z]{2,}))$/;
-
-  const email = input.value.trim();
-  if (!emailRegex.test(email)) {
-    return showError(input, invalidMsg);
-  }
-  return true;
-}
-
-const form = document.querySelector('#signup');
-
-const NAME_REQUIRED = 'Please enter your name';
-const EMAIL_REQUIRED = 'Please enter your email';
-const EMAIL_INVALID = 'Please enter a correct email address format';
-
-form.addEventListener('submit', (e) => {
-  // stop form submission
-  e.preventDefault();
-
-  // validate the form
-  const nameValid = hasValue(form.elements.name, NAME_REQUIRED);
-  const emailValid = validateEmail(form.elements.email, EMAIL_REQUIRED, EMAIL_INVALID);
-  // if valid, submit the form.
-  if (nameValid && emailValid) {
-      
-  }
-});
-
 //
+// vALIDATION
+
+// const contactForm = document.getElementById('formSection');
+// const email = document.querySelector('#email');
+// const errorDisplay = document.querySelector('#errorDisplay');
+// const checker = /^[a-z0-9._-]+@[a-z0-9.-]+\.[a-z]{2,4}$/g;
+// contactForm.addEventListener('submit', (e) => {
+//   if (!email.value.match(checker)) {
+//     e.preventDefault();
+
+//     errorDisplay.('errorDisplay');
+//     errorDisplay.innerHTML = '*Your email address should be all in lowercase';
+//   } else {
+//     errorDisplay.classList.add('none');
+//   }
+// });
+
+function validateEmail() {
+  const email1 = document.getElementById('email').value;
+  if (email1 === email1.toLowerCase()) {
+    // alert('email is valid');
+    document.forms.email.focus();
+    return true;
+  }
+
+  document.querySelector('.error-msg-before').classList.add('error-msg-after');
+  return false;
+}
+
+validateEmail();
+
 const mobileModalContent = [
   {
     title: 'Multi-Post Stories',
@@ -167,7 +136,7 @@ function createCards() {
         alt="My Recrnt Work "
       />
     </div>
-    <div class="container">
+    <iv class="container">
       <div>
         <p class="ellipse1"></p>
         <p class="ellipse2"></p>
@@ -192,12 +161,7 @@ function createCards() {
         <li>${card.languagesDesk[8]}</li>
       </ul>
       <button  data-modal-target="#modalMobile"  type="button"  class="seeProject"> See Project</button>
-      
-      <div class="mobile-modal" id="modalMobile"></div>
-    </div>
-    <div id="popup">
-
-    </div>
+   
   </div>`;
   });
 }
@@ -265,10 +229,10 @@ const language = mobileModal.languagesMobile.join('  ');
 modalData.innerHTML = `<h2 class="mobile-modal-title">${desktopModalContent.title}</h2>
   <span> <a onclick="closePopupModal()" href="" class="close-popup"><img class="closeImage" src="${desktopModalContent.closeImage}" alt="Close Image Mobile modal" /></a></span>
   <img class="desktopModalImage" src="${desktopModalContent.imageDesktop}" alt="Project Image on desktop device">
-  <p class="desktopModalText">${desktopModalContent.descriptionDesktop}</p>
-  <ul class="mobileModalLang">${language}</ul>
+  <div class="desktopText"><p class="desktopModalText">${desktopModalContent.descriptionDesktop}</p></div>
+  <div class="mobileLang"><ul class="mobileModalLang">${language}</ul></div>
   <img class="mobileModalImage" src="${mobileModal.imageMobile}" alt="Project Image on mobile device">
-  <p class="mobileModalText">${mobileModal.descriptionMobile}</p>
+  <div class="mobileText"><p class="mobileModalText">${mobileModal.descriptionMobile}</p></div>
   <div class="scrLive"><button class="liveButton" type="button">See Live <img class="live-icon" src="./image/Icon.png"></button>
   <button class="srcButton" type="button">See Source <img class="src-icon" src="./image/Vector(1).png"></button></div>
 `;
