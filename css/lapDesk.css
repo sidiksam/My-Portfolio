@@ -685,7 +685,8 @@
     z-index: 1;
     pointer-events: none;
     background: #191765;
-    background-image: url("../image/Ellipse-1.svg"),
+    background-image:
+      url("../image/Ellipse-1.svg"),
       url("../image/Ellipse-2.svg");
     background-position: left, bottom right;
     background-repeat: no-repeat;
