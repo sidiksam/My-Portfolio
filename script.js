@@ -143,30 +143,34 @@ const popup = document.querySelector('#popup');
 const mobileModal = [
   {
     title: 'Multi-Post Stories',
-    descriptionMobile: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting  ever since the 1500s, when an unknown printer took a galley of type veris lapoa todoe.",
+    descriptionMobile:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting  ever since the 1500s, when an unknown printer took a galley of type veris lapoa todoe.",
     imageMobile: './image/modalMobile.png',
     closeImage: './image/close-icon.png',
     languagesMobile: ['|', 'html', '|', 'Ruby on rails', '|', 'css'],
   },
 ];
 
-const desktopModalContent = [{
-  title: 'Multi-Post Stories',
-  descriptionDesktop: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting  ever since the 1500s, when an unknown printer took a galley of type veris lapoa todoe.",
-  imageDesktop: './image/modal-desktop.png',
-  closeImage: './image/close-icon.png',
-  languagesDesk: [
-    '|',
-    'html',
-    '|',
-    'Ruby on rails',
-    '|',
-    'css',
-    '|',
-    'Github',
-    '|',
-  ],
-}];
+const desktopModalContent = [
+  {
+    title: 'Multi-Post Stories',
+    descriptionDesktop:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting  ever since the 1500s, when an unknown printer took a galley of type veris lapoa todoe.",
+    imageDesktop: './image/modal-desktop.png',
+    closeImage: './image/close-icon.png',
+    languagesDesk: [
+      '|',
+      'html',
+      '|',
+      'Ruby on rails',
+      '|',
+      'css',
+      '|',
+      'Github',
+      '|',
+    ],
+  },
+];
 
 const modalData = document.getElementById('modalMobile');
 
@@ -188,14 +192,7 @@ desktopModalContent.languagesDesk = [
 // modal data
 mobileModal.descriptionMobile = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting  ever since the 1500s, when an unknown printer took a galley of type veris lapoa todoe.";
 mobileModal.imageMobile = './image/modalMobile.png';
-mobileModal.languagesMobile = [
-  '|',
-  'html',
-  '|',
-  'Ruby on rails',
-  '|',
-  'css',
-];
+mobileModal.languagesMobile = ['|', 'html', '|', 'Ruby on rails', '|', 'css'];
 
 const language = mobileModal.languagesMobile.join('  ');
 

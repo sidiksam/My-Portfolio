@@ -1,4 +1,3 @@
-
 /* Media Query for Laptops and Desktops */
 @media (min-width: 1025px) and (max-width: 1280px) {
   /* Desktop */
@@ -617,7 +616,6 @@
     transform: translate(-50%, -50%) scale(1);
   }
 
-
   .mobileLang {
     display: flex;
     flex-direction: row;
@@ -689,7 +687,7 @@
     align-items: center;
     width: 37vw;
     height: 236px;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
